@@ -258,6 +258,7 @@ def company_compare():
         })
 
     comparison = [row.asDict() for row in results]
+    comparison.sort(key=lambda x: [company1, company2].index(x["company"]))
 
     return jsonify({"comparison": comparison})
 
