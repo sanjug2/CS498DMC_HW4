@@ -89,7 +89,7 @@ def high_fare_trips():
     RETURN t.trip_id AS trip_id,
            t.fare AS fare,
            d.driver_id AS driver_id
-    ORDER BY fare desc
+    ORDER BY fare desc, trip_id ASC
     """
 
     with driver.session() as session:
